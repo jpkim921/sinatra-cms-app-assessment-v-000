@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
   post '/user/signup' do
     if params.values.any?{|param| param == ""}
-      redirect '/user/signup'
+      redirect '/users/signup'
     else
       user = User.create(params)
       session[:user_id] = user.id
